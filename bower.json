@@ -13,6 +13,10 @@
     "range",
     "html5"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmende/bootstrap-range-input"
+  },
   "moduleType": [],
   "homepage": "",
   "ignore": [
