@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bootstrap Range Input - Getting Started</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../dist/css/bootstrap-range-input.min.css">
+
+		<link rel="stylesheet" href="https://getbootstrap.com/assets/css/docs.min.css">
+
+		<script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<header class="bs-docs-nav navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button aria-controls="bs-navbar" aria-expanded="false" class=
+					"collapsed navbar-toggle" data-target="#bs-navbar" data-toggle=
+					"collapse" type="button"><span class="sr-only">Toggle
+					navigation</span> <span class="icon-bar"></span> <span class=
+					"icon-bar"></span> <span class="icon-bar"></span></button>
+					<a class="navbar-brand" href="index.html">Bootstrap Range Input</a>
+				</div>
+				<nav class="collapse navbar-collapse" id="bs-navbar">
+					<ul class="nav navbar-nav">
+						<!--<li>
+							<a href="#">Download</a>
+						</li>-->
+						<li>
+							<a href="examples.html">Examples</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="bs-docs-header" id="content" tabindex="-1">
+			<div class="container">
+				<h1>Bootstrap Range Input</h1>
+				<p>Simply styles html5 range inputs in a bootstrap like manner with pure css.</p><br>
+
+				<div class="input-group" style="max-width: 400px;">
+					<input id="like-slider" type="range" class="form-control" glyphicon="heart" min="0" max="100" value="50">
+					<span id="like-text" class="input-group-addon" id="sizing-addon2">Not bad!</span>
+				</div>
+				<script>
+					var likeSlider = document.getElementById('like-slider');
+					var likeText = document.getElementById('like-text');
+					likeSlider.addEventListener('input', function() {
+						var val = parseInt(this.value, 10);
+						switch (true) {
+							case (val < 30):
+								likeText.innerHTML = 'Lame...';
+								break;
+							case (val < 80):
+								likeText.innerHTML = 'Not bad.';
+								break;
+							default:
+								likeText.innerHTML = 'Awesome!';
+						}
+					});
+				</script>
+			</div>
+		</div>
+
+		<div class="container bs-docs-container">
+			<div class="row">
+				<!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h2>Installation</h2>
+					<p></p>
+				</div>-->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h2>Getting Started</h2>
+					<p>Include the dependencies: Bootstrap and bootstrap-range-input CSS.</p>
+					<pre><code class="hljs xml">&lt;link href=&quot;bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;bootstrap-range-input/dist/css/bootstrap-range-input.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+					<p>Now simply add the <code>form-control</code> class to your range inputs.</p>
+					<pre><code>&lt;input type=&quot;range&quot; class=&quot;form-control&quot; /&gt;</code></pre>
+					<div class="text-center">
+						<a href="examples.html" class="btn btn-lg btn-primary">More Examples</a>
+					</div>
+
+					<h2>Note</h2>
+					<p>To display the glyphicons on the slider thumbs they are being translated into inline svg graphics that will then be used as background-images. These Glyphicon Halflings are normally not available for free and where made available for Bootstrap free of cost. Therefore before using them on your sliders I personally suggest to purchase the pro version <a href="http://glyphicons.com/">here</a> even though the author told me that this was ok from his point of view.</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="bs-docs-footer">
+			<div class="container">
+				<p>License MIT</p>
+				<p>Created by <a href="https://github.com/mmende">Martin Mende</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

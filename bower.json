@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap-range-input",
+  "description": "Simply styles html5 range inputs in a bootstrap like manner.",
+  "main": "dist/css/bootstrap-range-input.min.css",
+  "authors": [
+    "Martin Mende"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "slider",
+    "input",
+    "range",
+    "html5"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,199 @@
+@import 'slider-glyphs.scss';
+
+@import "bootstrap/mixins/vendor-prefixes";
+@import "bootstrap/variables";
+@import "bootstrap/mixins/tab-focus";
+@import "bootstrap/mixins/opacity";
+
+input.form-control[type="range"] {
+	-webkit-appearance: none;
+	
+	display: inline-block;
+	vertical-align: middle;
+	background: $input-group-addon-bg;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	padding: 0;
+
+	position: relative;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 90%;
+		//width: auto;
+		height: 3px;
+		// vertical centering
+		top: 50%;
+		margin-top: -1.5px;
+
+		//margin-left: 1.225em;
+		//margin-right: 1.225em;
+		left: 5%;
+		background: $input-group-addon-border-color;
+		border-radius: 3px;
+		-webkit-box-shadow: inset 0 1px 0px $gray;
+		box-shadow: inset 0 1px 0px rgba(0, 0, 0, .125);
+
+		cursor: pointer;
+	}
+	
+	//&::-moz-range-track,
+	//&::-ms-track,
+	&::-webkit-slider-runnable-track {
+		cursor: pointer;
+		position: relative;
+	}
+
+	//&::-moz-range-thumb,
+	//&::-ms-thumb,
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+
+		position: relative;
+		z-index: 2;
+		display: table-cell;
+		background-color: $input-bg;
+		
+		width: $input-height-base;
+		height: $input-height-base;
+
+		border: 1px solid $input-group-addon-border-color;
+		border-radius: $input-border-radius;
+
+		cursor: pointer;
+		@include user-select(none);
+
+		&:hover {
+			background-color: $gray-lighter;
+			border-color: $input-group-addon-border-color;
+		}
+	}
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		border: 1px solid $input-group-addon-border-color;
+		//&::-moz-range-track,
+		//&::-ms-track,
+		&::-webkit-slider-runnable-track {
+			outline: none;
+		}
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			border: 1px solid $input-border-focus;
+			@include tab-focus;
+			//outline: none;
+			//background: #e6e6e6;
+		}
+	}
+	&:active {
+		//&::-moz-range-track,
+		//&::-ms-track,
+		&::-webkit-slider-runnable-track {
+			outline: none;
+		}
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			background-color: $gray-lighter;
+			@include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+			/* background-color: #d4d4d4;
+			border-color: #8c8c8c;
+			-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+			box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125) */
+		}
+	}
+
+	&[glyphicon] {
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			-webkit-transform: scaleY(-1);
+
+			background-size: 80% 80%;
+		}
+	}
+
+	&.input-lg {
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			width: $input-height-large;
+			height: $input-height-large;
+			border-radius: $input-border-radius-large;
+		}
+	}
+	&.input-sm {
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			width: $input-height-small;
+			height: $input-height-small;
+			border-radius: $input-border-radius-small;
+		}
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		//&::-moz-range-track,
+		//&::-ms-track,
+		&::-webkit-slider-runnable-track {
+			cursor: $cursor-disabled;
+		}
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			cursor: $cursor-disabled;
+			//@include opacity(.65);
+			@include box-shadow(none);
+			//border: 1px solid lighten($input-group-addon-border-color, 5%);
+			background-color: $gray-lighter;
+		}
+		&:hover {
+			&:after {
+				cursor: $cursor-disabled;
+			}
+			//&::-moz-range-track,
+			//&::-ms-track,
+			&::-webkit-slider-runnable-track {
+				cursor: $cursor-disabled;
+			}
+			//&::-moz-range-thumb,
+			//&::-ms-thumb,
+			&::-webkit-slider-thumb {
+				cursor: $cursor-disabled;
+				@include box-shadow(none);
+				//border: 1px solid lighten($input-group-addon-border-color, 5%);
+				background-color: $gray-lighter;
+			}
+		}
+	}
+}
+
+// Add styles for input groups
+.input-group {
+	&.input-group-lg input.form-control[type="range"] {
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			width: $input-height-large;
+			height: $input-height-large;
+			border-radius: $input-border-radius-large;
+		}
+	}
+	&.input-group-sm input.form-control[type="range"] {
+		//&::-moz-range-thumb,
+		//&::-ms-thumb,
+		&::-webkit-slider-thumb {
+			width: $input-height-small;
+			height: $input-height-small;
+			border-radius: $input-border-radius-small;
+		}
+	}
+}

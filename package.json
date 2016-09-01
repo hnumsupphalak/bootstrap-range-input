@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap-range-input",
+  "version": "1.0.0",
+  "description": "Simply styles html5 range inputs in a bootstrap like manner.",
+  "main": "dist/css/bootstrap-range-input-min.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Mende",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "xml2js": "^0.4.17"
+  }
+}
