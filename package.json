@@ -7,6 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Martin Mende",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmende/bootstrap-range-input"
+  },
+  "keywords": [
+    "bootstrap",
+    "range",
+    "input"
+  ],
   "license": "MIT",
   "devDependencies": {
     "bootstrap": "^3.3.7",
